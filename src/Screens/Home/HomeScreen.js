@@ -1,3 +1,5 @@
+//@flow
+
 import React from 'react';
 import {Text, View, Image, FlatList} from 'react-native';
 import {Styles} from './HomeScreen.style';

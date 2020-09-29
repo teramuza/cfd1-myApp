@@ -5,7 +5,6 @@ import {COLORS} from '../../Themes';
 const Styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.GREY_BACKGROUND,
   },
   header: {
     height: rh(200),
@@ -26,7 +25,7 @@ const Styles = StyleSheet.create({
   card: {
     height: rh(150),
     width: rw(170),
-    backgroundColor: COLORS.WHITE,
+    backgroundColor: 'white',
     borderRadius: rbr(6),
     elevation: 5,
     alignItems: 'center',

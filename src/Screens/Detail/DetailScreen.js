@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Text, TextInput, View} from 'react-native';
-import {routes} from '../../routes';
+import {routes} from '../../Routes/routes';
 
 const DetailsScreen = ({navigation}) => {
   const initialState = {
