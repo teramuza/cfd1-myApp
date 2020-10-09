@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import {SafeAreaView} from 'react-native';
 import {Provider as StoreProvider} from 'react-redux';
@@ -12,13 +14,11 @@ const App: () => React$Node = () => {
   const APP_THEME = COLORS.BLACK;
 
   return (
-    <SafeAreaView style={{flex: 0, backgroundColor: APP_THEME}}>
-      <SafeAreaView style={{flex: 1, backgroundColor: APP_THEME}}>
-        <AppStatusBar backgroundColor={APP_THEME} barStyle="light-content" />
-        <StoreProvider store={store}>
-          <RootNavigation />
-        </StoreProvider>
-      </SafeAreaView>
+    <SafeAreaView style={{flex: 1, backgroundColor: APP_THEME}}>
+      <AppStatusBar backgroundColor={APP_THEME} barStyle="light-content" />
+      <StoreProvider store={store}>
+        <RootNavigation />
+      </StoreProvider>
     </SafeAreaView>
   );
 };

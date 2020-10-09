@@ -9,9 +9,17 @@ import {keyExtractor, renderScreen} from '../../Utils/Helpers.utils';
 
 type Props = {
   navigation: NavigationProp,
+  count: number,
+  increaseCount: Function,
+  decreaseCount: Function,
 };
 
-const HomeScreen = ({navigation}: Props) => {
+const HomeScreen = ({
+  navigation,
+  count,
+  increaseCount,
+  decreaseCount,
+}: Props) => {
   const renderHeader = () => {
     return (
       <View style={Styles.header}>
@@ -48,6 +56,14 @@ const HomeScreen = ({navigation}: Props) => {
             keyExtractor={keyExtractor}
             horizontal
           />
+        </View>
+        <View style={Styles.textSection}>
+          <Text
+            onPress={() => increaseCount()}
+            onLongPress={() => decreaseCount()}
+            style={Styles.text}>
+            {'count: ' + count}
+          </Text>
         </View>
       </View>
     );

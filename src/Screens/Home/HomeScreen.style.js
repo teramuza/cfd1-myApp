@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {rh, rw, rbr} from '../../Utils/Layout.utils';
+import {rh, rw, rbr, rf} from '../../Utils/Layout.utils';
 import {COLORS} from '../../Themes';
 
 const Styles = StyleSheet.create({
@@ -39,6 +39,13 @@ const Styles = StyleSheet.create({
   textCard: {
     flex: 1,
     marginVertical: rh(20),
+  },
+  textSection: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: rf(20),
   },
 });
 
