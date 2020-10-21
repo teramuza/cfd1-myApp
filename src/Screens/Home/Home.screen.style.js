@@ -30,6 +30,7 @@ const Styles = StyleSheet.create({
     elevation: 5,
     alignItems: 'center',
     marginHorizontal: rw(10),
+    overflow: 'hidden',
   },
   imageCard: {
     height: rh(80),

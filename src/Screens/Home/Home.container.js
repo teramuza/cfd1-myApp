@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import HomeScreen from './HomeScreen';
+import HomeScreen from './Home.screen';
 import {increaseCount, decreaseCount} from './Home.actions';
 
 const mapStateToProps = (state) => ({

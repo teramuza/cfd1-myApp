@@ -1,11 +1,18 @@
 //@flow
 
 import React from 'react';
-import {Text, View, Image, FlatList} from 'react-native';
-import {Styles} from './HomeScreen.style';
+import {
+  Text,
+  View,
+  Image,
+  FlatList,
+  TouchableWithoutFeedback,
+} from 'react-native';
+import {Styles} from './Home.screen.style';
 import {IMAGES} from '../../Themes';
 import {NavigationProp} from '@react-navigation/native';
 import {keyExtractor, renderScreen} from '../../Utils/Helpers.utils';
+import {routes} from '../../Routes/routes';
 
 type Props = {
   navigation: NavigationProp,
@@ -73,10 +80,13 @@ const HomeScreen = ({
     const imageCard = {uri: item.imageUrl};
 
     return (
-      <View style={Styles.card}>
-        <Image style={Styles.imageCard} source={imageCard} />
-        <Text style={Styles.textCard}>{item.title}</Text>
-      </View>
+      <TouchableWithoutFeedback
+        onPress={() => navigation.navigate(routes.DetailScreen)}>
+        <View style={Styles.card}>
+          <Image style={Styles.imageCard} source={imageCard} />
+          <Text style={Styles.textCard}>{item.title}</Text>
+        </View>
+      </TouchableWithoutFeedback>
     );
   };
 

@@ -11,7 +11,7 @@ export const homeStore = (state = initialState, action) => {
     case INCREMENT_COUNT:
       return {
         ...state,
-        count: action.payload + 1,
+        count: state.count + 1,
       };
     case DECREMENT_COUNT:
       return {

@@ -1,8 +1,21 @@
 import React, {useState} from 'react';
 import {Text, TextInput, View} from 'react-native';
 import {routes} from '../../Routes/routes';
+import {NavigationProp} from '@react-navigation/native';
 
-const DetailsScreen = ({navigation}) => {
+type Props = {
+  navigation: NavigationProp,
+  count: number,
+  increaseCount: Function,
+  decreaseCount: Function,
+};
+
+const DetailsScreen = ({
+  navigation,
+  count,
+  increaseCount,
+  decreaseCount,
+}: Props) => {
   const initialState = {
     name: 'Raja',
     age: 18,
@@ -23,8 +36,7 @@ const DetailsScreen = ({navigation}) => {
       <TextInput
         keyboardType="numeric"
         style={{width: 200, height: 40, borderColor: 'gray', borderWidth: 1}}
-        onChangeText={(text) => setState({...state, age: Number(text)})}
-        value={age + ''}
+        value={count + ''}
       />
     </View>
   );
